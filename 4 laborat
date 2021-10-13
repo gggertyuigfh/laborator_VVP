@@ -1,0 +1,63 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main() {
+
+const double N = 2;
+const double Pi = 3.14; 
+double a = 0;
+double b = 0;
+double d = 0;
+double x1 = 0;
+double x2 = 0;
+double x3 = 0;
+double x4 = 0;
+
+cout <<"сторона a = "; 
+cin >> a;
+cout <<"сторона b = "; 
+cin >> b;
+cout <<"диаметр = ";
+cin >> d;
+cout <<"введи два ненулевых числа(1,2) "; 
+cin >> x1 >> x2;
+cout <<"введи два ненулевых числа(3,4) "; 
+cin >> x3 >> x4;
+
+double S = a*b;
+double P = 2*(a+b);
+double L = Pi*d;
+double SredA = (a+b)/2;
+double sum12 = x1 + x2;
+double razn12 = x1 - x2;
+double razn21 = x2 - x1;
+double proiz12 = x1*x2;
+double raznKvadr12 = pow(x1, N) - pow(x2,N);
+double raznKvadr21 = pow(x2, N) - pow(x1,N);
+double sum34 = x3 + x4;
+double razn34 = x3 - x4;
+double razn43 = x4 - x3;
+double proiz34 = x3*x4;
+double chastMod34 = abs(x3)/abs(x4);
+double chastMod43 = abs(x4)/abs(x3);
+
+cout << "S = " << S << endl;
+cout << "P = " << P << endl;
+cout << "L = " << L << endl;
+cout << "Средняя арифметическая = " << SredA << endl;
+cout << "сумма двух ненулевых чисел (1,2) = " << sum12 << endl;
+cout << "разность двух ненулевых чисел (1,2) = "<< razn12 << endl;
+cout << "разность двух ненулевых чисел (2,1) = "<< razn21 << endl;
+cout << "произведение двух ненулевых чисел (1,2) = " << proiz12 << endl;
+cout << "разность квадратов двух ненулевых чисел (1,2) = " << raznKvadr12 << endl; 
+cout << "разность квадратов двух ненулевых чисел (2,1) = " << raznKvadr21 << endl;
+cout << "сумма двух ненулевых чисел (3,4) = " << sum34 << endl;
+cout << "разность двух ненулевых чисел (3,4) ="<< razn34 << endl;
+cout << "разность двух ненулевых чисел (4,3) ="<< razn43 << endl;
+cout << "произведение двух ненулевых чисел (3,4) = " << proiz34 << endl;
+cout << "частное модулей двух ненулевых чисел (3,4) = " << chastMod34 << endl; 
+cout << "частное модулей двух ненулевых чисел (4,3) = " << chastMod43 << endl;
+
+}
