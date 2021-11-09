@@ -1,0 +1,96 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    double x1, y1, x2, y2, x3, y3, x, y, A, B, C, AB, BC, AC, P, S, Rasto, Sum, Proiz;
+
+    cout << "x1 = ";
+    cin >> x1;
+    cout << "y1 = ";
+    cin >> y1;
+    cout << "x2 = ";
+    cin >> x2;
+    cout << "y1 = ";
+    cin >> y2;
+    x = abs(x1-x2);
+    y = abs(y1-y2);
+    Rasto = sqrt(x*x+y*y);
+    
+    cout << "Растояние между двумя точками (x1,y1) и (x2,y2) = " << Rasto << endl;
+
+    
+    cout << "A=";
+    cin >> A;
+    cout << "B=";
+    cin >> B;
+    cout << "C=";
+    cin >> C;
+    AC = abs(A-C);
+    BC = abs(B-C);
+    Sum = AC+BC;
+    
+    cout << "AC = " << AC << endl;
+    cout << "BC = " << BC << endl;
+    cout << "Сумма AC и BC = " << Sum << endl;
+    
+    
+    cout << "A=";
+    cin >> A;
+    cout << "B=";
+    cin >> B;
+    cout << "C=";
+    cin >> C;
+    AC = abs(A-C);
+    BC = abs(B-C);
+    Proiz = AC*BC;
+    
+    cout << "Произведение AC и BC = " << Proiz << endl;
+    
+    
+    cout << "x1 = ";
+    cin >> x1;
+    cout << "y1 = ";
+    cin >> y1;
+    cout << "x2 = ";
+    cin >> x2;
+    cout << "y2 = ";
+    cin >> y2;
+    x = abs(x1-x2);
+    y = abs(y1-y2);
+    P = 2*(x+y);
+    S = x*y;
+    
+    cout << "P = " << P << endl;
+    cout << "S = " << S << endl;
+    
+    
+    cout << "x1 = ";
+    cin >> x1;
+    cout << "y1 = ";
+    cin >> y1;
+    cout << "x2 = ";
+    cin >> x2;
+    cout << "y2 = ";
+    cin >> y2;
+    cout << "x3 = ";
+    cin >> x3;
+    cout << "y3 = ";
+    cin >> y3;
+    
+    x = abs(x1-x2);
+    y = abs(y1-y2);
+    AB = sqrt(x*x+y*y);
+    x = abs(x1-x3);
+    y = abs(y1-y3);
+    AC = sqrt(x*x+y*y);
+    x = abs(x2-x3);
+    y = abs(y2-y3);
+    BC = sqrt(x*x+y*y);
+    P = AB+BC+AC;
+    S = 0.5 * abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1));
+    
+    cout << "P = " << P << endl;
+    cout << "S = " << S << endl;
+}
+
