@@ -1,0 +1,96 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+    
+int main () {
+
+    double A, B, C, Perest1, Perest2, x, y, z, AA, AAA;
+    
+    cout << "Задание 1" << endl;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    
+    Perest1 = A;
+    A = B;
+    B = Perest1;
+    
+    cout << "A = " << A << endl;
+    cout << "B = " << B << endl;
+    
+    cout << "Задание 2" << endl;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    cout << "C = ";
+    cin >> C;
+    
+    Perest1 = A;
+    A=C;
+    Perest2=B;
+    B=Perest1;
+    C=Perest2;
+    
+    cout << "A = " << A << endl;
+    cout << "B = " << B << endl;
+    cout << "C = " << C << endl;
+
+
+    cout << "Задание 3" << endl;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    cout << "C = ";
+    cin >> C;
+    
+    Perest1 = A;
+    A=B;
+    Perest2=C;
+    C=Perest1;
+    B=Perest2;
+    
+    cout << "A = " << A << endl;
+    cout << "B = " << B << endl;
+    cout << "C = " << C << endl;
+
+    cout << "Задание 4" << endl;
+    cout << "x = ";
+    cin >> x;
+    
+    y = 3*(x*x*x*x*x*x)-6*(x*x)-7;
+    
+    cout << "y =" << y << endl;
+    
+    cout << " Задание 5" << endl;
+    cout << "x = ";
+    cin >> x;
+    
+    z=x-3;
+    y=4*(z*z*z*z*z*z)-7*(z*z*z)+2;
+    
+    cout << "y = " << y << endl;
+
+    
+    cout << "Задание 6" << endl;
+    cout << "A = ";
+    cin >> A;
+    AA=A*A;
+    A=AA*AA*AA;
+    cout << "A^8 = " << A << endl;
+    
+    cout << "Задание 7" << endl;
+    cout << "A = ";
+    cin >> A;
+    
+    AA=A*A;
+    AAA=A*A*A;
+    A=AAA*AAA*AAA*AA*AA*AA;
+    
+    cout << "A^15 = " << A << endl;
+    
+}
+
