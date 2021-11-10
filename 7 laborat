@@ -1,0 +1,97 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main()
+{
+    double ygol, rad, A, X, Y, Z, ZY, V1, V2, S, T, rasto, x, a, b, A1, B1, C1, A2, B2, C2, y, z, zx, zy;
+    
+    cout << "Задание 1" << endl;
+    cout << "Введи угол : ";
+    cin >> ygol;
+    if ((ygol > 360) or (ygol < 0))
+    {
+        cout << "Угол должен быть больше 0 и меньше 360 градусов" << endl;
+    }
+    else
+    {
+        rad = ygol / 180;
+        cout << "pi радиан = "<< rad << endl;
+    }
+    
+    
+    cout << "Задание 2" << endl;
+    cout << "Введи pi радиан :";
+    cin >> rad;
+    if ((rad>2) or (rad<0))
+    {
+        cout << "Радиан Pi дожен быть больше 0 и меньше 2-х" << endl;
+    }
+    else
+    {
+        ygol = rad * 180;
+        cout << "Угол = " << ygol << endl;
+    }
+    
+    cout << "Задание 3" << endl;
+    cout <<"Введи изначальный вес конфет : ";
+    cin >> X;
+    cout << "Введи цену за X килограм : ";
+    cin >> A;
+    cout << "Введи нужный вес : ";
+    cin >> Y ;
+    
+    Z = A / X;
+    ZY = Z*Y;
+    
+    cout << "Цена за вес = " << ZY << endl;
+    
+    
+    cout << "Задание 4" << endl;
+    cout << "Скорость первой машины (км/ч) = ";
+    cin >> V1;
+    cout << "Скорость второй машины (км/ч) = ";
+    cin >> V2;
+    cout << "Изначальное растояние между ними (км) = ";
+    cin >> S;
+    cout << "Время (ч) = ";
+    cin >> T;
+    
+    rasto = S+T*(V1+V2);
+    
+    cout << "Растояние между ними за время Т = " << rasto << endl;
+    
+    
+    cout << "Задание 5" << endl;
+    cout << "Введи коэффицент A - ";
+    cin >> a;
+    cout << "Введи коэффицент B - ";
+    cin >> b;
+    x = -b/a;
+    cout << "X = " << x << endl;
+    
+    
+    cout << "Задание 6" << endl;
+    cout << "Коэффицент A1 = ";
+    cin >> A1;
+    cout << "Коэффицент B1 = ";
+    cin >> B1;
+    cout << "Коэффицент C1 = ";
+    cin >> C1;
+    cout << "Коэффицент A2 = ";
+    cin >> A2;
+    cout << "Коэффицент B2 = ";
+    cin >> B2;
+    cout << "Коэффицент C2 = ";
+    cin >> C2;
+    
+    z = A1 * B2 - A2 * B1;
+    zx = C1 * B2 - C2 * B1;
+    zy = A1 * C2 - A2 * C1;
+    x = zx / z;
+    y = zy / z;
+
+    cout << "x = " << x << endl;
+    cout << "y = " << y << endl;
+}
