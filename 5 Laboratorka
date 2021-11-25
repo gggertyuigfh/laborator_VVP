@@ -42,12 +42,19 @@ int main () {
     cin >> B;
     cout << "Точка C=";
     cin >> C;
+    AB = abs(A-B);
     AC = abs(A-C);
     BC = abs(B-C);
+    if (AB>AC and AB>BC)
+    {
     Proiz = AC*BC;
     
     cout << "Произведение длин отрезков AC и BC = " << Proiz << endl;
-    
+    } 
+    else
+    {
+     cout << "Читай условие внимательнее" << endl;
+    }
     cout << "Задание 4" << endl;
     cout << "Координата по оси x 1й вершины = ";
     cin >> x1;
