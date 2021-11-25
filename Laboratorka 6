@@ -8,24 +8,24 @@ int main () {
     double A, B, C, Perest1, Perest2, x, y, z, AA, AAA;
     
     cout << "Задание 1" << endl;
-    cout << "A = ";
+    cout << "Переменная A = ";
     cin >> A;
-    cout << "B = ";
+    cout << "Переменная B = ";
     cin >> B;
     
     Perest1 = A;
     A = B;
     B = Perest1;
     
-    cout << "A = " << A << endl;
-    cout << "B = " << B << endl;
+    cout << "Переменная A = " << A << endl;
+    cout << "Переменная B = " << B << endl;
     
     cout << "Задание 2" << endl;
-    cout << "A = ";
+    cout << "Переменная A = ";
     cin >> A;
-    cout << "B = ";
+    cout << "Переменная B = ";
     cin >> B;
-    cout << "C = ";
+    cout << "Переменная C = ";
     cin >> C;
     
     Perest1 = A;
@@ -34,17 +34,17 @@ int main () {
     B=Perest1;
     C=Perest2;
     
-    cout << "A = " << A << endl;
-    cout << "B = " << B << endl;
-    cout << "C = " << C << endl;
+    cout << "Переменная A = " << A << endl;
+    cout << "Переменная B = " << B << endl;
+    cout << "Переменная C = " << C << endl;
 
 
     cout << "Задание 3" << endl;
-    cout << "A = ";
+    cout << "Переменная A = ";
     cin >> A;
-    cout << "B = ";
+    cout << "Переменная B = ";
     cin >> B;
-    cout << "C = ";
+    cout << "Переменная C = ";
     cin >> C;
     
     Perest1 = A;
@@ -53,11 +53,12 @@ int main () {
     C=Perest1;
     B=Perest2;
     
-    cout << "A = " << A << endl;
-    cout << "B = " << B << endl;
-    cout << "C = " << C << endl;
+    cout << "Переменная A = " << A << endl;
+    cout << "Переменная B = " << B << endl;
+    cout << "Переменная C = " << C << endl;
 
     cout << "Задание 4" << endl;
+    cout << "y = 3x^6 − 6x^2 − 7" << endl;
     cout << "x = ";
     cin >> x;
     
@@ -66,6 +67,7 @@ int main () {
     cout << "y =" << y << endl;
     
     cout << " Задание 5" << endl;
+    cout << "y = 4(x−3)^6 − 7(x−3)^3 + 2" << endl;
     cout << "x = ";
     cin >> x;
     
