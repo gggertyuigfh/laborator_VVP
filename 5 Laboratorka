@@ -5,77 +5,78 @@ using namespace std;
 int main () {
     double x1, y1, x2, y2, x3, y3, x, y, A, B, C, AB, BC, AC, P, S, Rasto, Sum, Proiz;
 
-    cout << "x1 = ";
+    cout << "Задание 1" << endl;
+    cout << "Координата первой точки по оси x = ";
     cin >> x1;
-    cout << "y1 = ";
+    cout << "Координата первой точки по оси y = ";
     cin >> y1;
-    cout << "x2 = ";
+    cout << "Координата второй точки ао оси x = ";
     cin >> x2;
-    cout << "y1 = ";
+    cout << "Координата второй точки по оси y = ";
     cin >> y2;
     x = abs(x1-x2);
     y = abs(y1-y2);
     Rasto = sqrt(x*x+y*y);
     
-    cout << "Растояние между двумя точками (x1,y1) и (x2,y2) = " << Rasto << endl;
+    cout << "Растояние между двумя точками = " << Rasto << endl;
 
-    
-    cout << "A=";
+    cout << "Задание 2" << endl;
+    cout << "Точка A=";
     cin >> A;
-    cout << "B=";
+    cout << "Точка B=";
     cin >> B;
-    cout << "C=";
+    cout << "Точка C=";
     cin >> C;
     AC = abs(A-C);
     BC = abs(B-C);
     Sum = AC+BC;
     
-    cout << "AC = " << AC << endl;
-    cout << "BC = " << BC << endl;
-    cout << "Сумма AC и BC = " << Sum << endl;
+    cout << "Длинна отрезока AC = " << AC << endl;
+    cout << "Длинна отрезока BC = " << BC << endl;
+    cout << "Сумма длин отрезков AC и BC = " << Sum << endl;
     
-    
-    cout << "A=";
+    cout << "Задание 3" << endl;
+    cout << "Точка A=";
     cin >> A;
-    cout << "B=";
+    cout << "Точка B=";
     cin >> B;
-    cout << "C=";
+    cout << "Точка C=";
     cin >> C;
     AC = abs(A-C);
     BC = abs(B-C);
     Proiz = AC*BC;
     
-    cout << "Произведение AC и BC = " << Proiz << endl;
+    cout << "Произведение длин отрезков AC и BC = " << Proiz << endl;
     
-    
-    cout << "x1 = ";
+    cout << "Задание 4" << endl;
+    cout << "Координата по оси x 1й вершины = ";
     cin >> x1;
-    cout << "y1 = ";
+    cout << "Координата по оси y 1й вершины = ";
     cin >> y1;
-    cout << "x2 = ";
+    cout << "Координата по оси x 2й вершины = ";
     cin >> x2;
-    cout << "y2 = ";
+    cout << "Координата по оси y 2й вершины = ";
     cin >> y2;
     x = abs(x1-x2);
     y = abs(y1-y2);
     P = 2*(x+y);
     S = x*y;
     
-    cout << "P = " << P << endl;
-    cout << "S = " << S << endl;
+    cout << "Периметр прямоугольника = " << P << endl;
+    cout << "Площадь прямоугольника = " << S << endl;
     
-    
-    cout << "x1 = ";
+    cout << "Задание 5" << endl;
+    cout << "Координаты по оси x 1й вершины = ";
     cin >> x1;
-    cout << "y1 = ";
+    cout << "Координата по оси y 1й вершины = ";
     cin >> y1;
-    cout << "x2 = ";
+    cout << "Координата по оси x 2й вершины = ";
     cin >> x2;
-    cout << "y2 = ";
+    cout << "Координата по оси y 2й вершины = ";
     cin >> y2;
-    cout << "x3 = ";
+    cout << "Координата по оси x 3й вершины  = ";
     cin >> x3;
-    cout << "y3 = ";
+    cout << "Координата по оси y 3й вершины = ";
     cin >> y3;
     
     x = abs(x1-x2);
@@ -90,7 +91,7 @@ int main () {
     P = AB+BC+AC;
     S = 0.5 * abs((x2 - x1) * (y3 - y1) - (x3 - x1) * (y2 - y1));
     
-    cout << "P = " << P << endl;
-    cout << "S = " << S << endl;
+    cout << "Периметр треугольника = " << P << endl;
+    cout << "Площадь треугольника = " << S << endl;
 }
 
