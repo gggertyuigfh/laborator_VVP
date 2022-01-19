@@ -1,0 +1,207 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+using namespace std;
+
+int main ()
+{
+    string N, K, L;
+    cout << "1. Дан массив размера N и целые числа K и L (1 ≤ K ≤ L ≤ N). Найти среднее арифметическое элементов массива с номерами от K до L включительно."<< endl;
+    cout << "Введи длину массива - ";
+    cin >> N;
+    cout << "K = ";
+    cin >> K;
+    cout << "L = ";
+    cin >> L;
+    if ((stoi(N) > 1) and (stoi(K) < stoi(L)) and (stoi(L) < stoi(N)) and (stoi(K) >= 0))
+    {
+        
+        string* A = new string[stoi(N)];
+        cout << "Введите элементы массива - ";
+        for (int i = 0; i < stoi(N); i++) 
+        {
+            cin >> A[i];
+        }
+        double sum = 0;
+        int num = 0;
+        for (int i = stoi(K) - 1; i <= stoi(L) - 1; i++)
+        {
+            sum = sum + stod(A[i]);
+            num++;
+        }
+        double ar_mean = sum / num;
+        cout << "Среднее арифметическое = " << ar_mean << endl;
+        delete[] A;
+    }
+    else
+    {
+        cout << "ошибка"<< endl;
+    }
+    
+    cout << "2. Дан целочисленный массив размера N, не содержащий одинаковых чисел. Проверить, образуют ли его элементы арифметическую прогрессию. Если образуют, то вывести разность прогрессии, если нет — вывести 0."<< endl;
+    cout << "Введи длину массива - ";
+        cin >> N;
+        if (stoi(N) > 1)
+        {
+            string* A = new string[stoi(N)];
+            cout << "Введите элементы массива - ";
+            for (int i = 0; i < stoi(N); i++)
+            {
+                cin >> A[i];
+            }
+            double sum = 0;
+            int num = 0;
+            double* D = new double[stoi(N)];
+            for (int i = 0; i < stoi(N) - 1; i++)
+            {
+                D[i] = stod(A[i + 1]) - stod(A[i]);
+            }
+            bool achtung = true;
+            for (int i = 0; i < stoi(N); i++)
+            {
+                if (D[i] != D[i+1])
+                {
+                    achtung = false;
+                }
+            }
+            if (achtung == false)
+            {
+                cout << "0"<< endl;;
+            }
+            else
+            {
+                cout << endl << D[1] << endl;
+            }
+
+
+            delete[] A;
+            delete[] D;
+        }
+        else
+        {
+            cout << "ошибка"<< endl;;
+        }
+    
+    cout << "3. Дан массив A размера N. Найти минимальный элемент из его элементов с четными номерами: A2, A4, A6,"<< endl;
+     cout << "Введи длину массива - ";
+        cin >> N;
+        if (stoi(N) > 1)
+        {
+            string* A = new string[stoi(N)];
+            cout << "Введите элементы массива - ";
+            for (int i = 0; i < stoi(N); i++)
+            {
+                cin >> A[i];
+            }
+            double min = 1000000;
+            for (int i = 1; i < stoi(N); i+=2)
+            {
+                if (stod(A[i]) < min)
+                {
+                    min = stod(A[i]);
+                }
+            }
+            cout << "Минимальное - " << min << endl;
+            delete[] A;
+        }
+        else
+        {
+            cout << "ошибка"<< endl;
+        }
+    
+    cout << "4. Дан массив размера N. Найти номер его последнего локального максимума (локальный максимум — это элемент, который больше любого из своих соседей)."<< endl;
+     cout << "Введи длину массива - ";
+        cin >> N;
+        if (stoi(N) > 1)
+        {
+            
+            string* A = new string[stoi(N)];
+            cout << "Введите элементы массива - ";
+            for (int i = 0; i < stoi(N); i++)
+            {
+                cin >> A[i];
+            }
+            int index = -1;
+            if (stod(A[0]) > stod(A[1]))
+            {
+                index = 0;
+            }
+            for (int i = 1; i < stoi(N) - 1; i++)
+            {
+                if ((stod(A[i]) > stod(A[i - 1])) and (stod(A[i]) > stod(A[i + 1])))
+                {
+                    index = i;
+                }
+            }
+            if (stod(A[stoi(N) - 1]) > stod(A[stoi(N) - 2])) 
+            {
+                index = stoi(N);
+            }
+            if (index >= 0)
+            {
+                cout << "ответ - " << index + 1 << endl;
+            }
+            else
+            {
+                cout << "это максимум"<< endl;
+            }
+
+            delete[] A;
+        }
+        else
+        {
+            cout << "ошибка"<< endl;
+        }
+    
+cout << "5. Дан целочисленный массив размера N, содержащий ровно два одинаковых элемента. Найти номера одинаковых элементов и вывести эти номера в порядке возрастания"<< endl;
+cout << "Введи длину массива - ";
+cin >> N;
+if (stoi(N) > 1)
+{
+    string* A = new string[stoi(N)];
+    cout << "Введите элементы массива - ";
+    for (int i = 0; i < stoi(N); i++)
+    {
+        cin >> A[i];
+    }
+    string* B = new string[stoi(N)];
+    for (int i = 0; i < stoi(N); i++)
+    {
+        B[i] = A[i];
+    }
+    for (int i = 0; i < stoi(N); i++) {
+        for (int j = 0; j < stoi(N) - 1; j++) {
+            if (stod(A[j]) > stod(A[j + 1])) {
+                double a = stod(A[j]);
+                A[j] = A[j + 1];
+                A[j + 1] = to_string(a);
+            }
+        }
+    }
+    double target = -100000000;
+    for (int i = 0; i < stoi(N) - 1; i++)
+    {
+        if (stod(A[i]) == stod(A[i + 1]))
+        {
+            target = stod(A[i]);
+            }
+        }
+        if (target != -100000000)
+        {
+            cout << "ответ - ";
+        }
+        for (int i = 0; i < stoi(N); i++)
+        {
+            if (target == stod(B[i])) 
+            {
+                cout << i + 1 << endl;
+            }
+        }
+        delete[] A;
+        delete[] B;
+    }
+    else
+    {
+        cout << "ошибка"<< endl;
+    }
+}
